@@ -38,3 +38,18 @@ nav a{
     text-decoration:none;
     font-family: Verdana, Geneva, sans-serif;
 }
+.id {
+	display: none;
+}
+input:invalid {
+	border: 2px solid red;
+}
+input:invalid +div{
+	display: black;
+}
+input:focus + div{
+	display: none;
+}
+input:active + div{
+	display: blue;
+}
