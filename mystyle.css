@@ -14,7 +14,12 @@ html{
 h1 {
 	color: navy;	
 }
-
+hr {
+	width: 100%;
+}
+br{
+	width: 100%;
+}
 p {
 	color: #ee3e80;
 }
