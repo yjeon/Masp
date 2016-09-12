@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Untitled Login page</title>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<title>Untitled Log-in Page</title>
 	</head>
 	<body>
-		<nav>
-			<a href="index.html">Home</a>
+		<nav id="gnb">
+			<div class="gnb">
+				<ul>
+					<a href="index.html"> Home</a>
+				</ul>
+			</div>
 		</nav>
-		<h1>
-			<p>Login page</p>
-		</h1>
+		<br>
+		<hr>
+		<br>
 		<form action="index.html">
-			<div>
+			<div class="email">
 				<label for="email">Email: </label>
 				<input type="email" placeholder="Enter E-mail" id="mail" name="user_email"/>
 			</div>
-			<div>
+			<div class="password">
 				<label for="password">Password: </label>
 				<input type="password" placeholder="Enter Password" id="password" name="user_password"/>
 			</div>
@@ -23,6 +28,9 @@
 				<button type="login">Login</button>
 			</div>
 		</form>
+		<br>
+		
+		<hr>
 
 	</body>
 </html>
