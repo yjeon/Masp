@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<title>Untitled Sign-up Page</title>
+	</head>
+
+	<body>
+		<nav id="gnb">
+			<div class="gnb">
+				<ul>
+					<a href="index.html"> Home</a>
+				</ul>
+			</div>
+		</nav>
+		
+		<h1>Signup Page</h1>
+		<h2>Hello Welcome here</h2>
+		<br>
+		<form action="index.html">
+		    	<div class ="id">
+		        	<label for="id"> ID: </label>
+		        	<input type="text" placeholder="Enter ID" id="id" name="user_id" />
+		    	</div>
+		    	<div class="email">
+		        	<label for="email">E-mail:</label>
+		        	<input type="email" placeholder="Enter E-mail" id="email" name="user_mail"/>
+		    	</div>
+		    	<div class="password">
+		    		<label for="password"> Password : 
+		    		</label>
+		        	<input type="password" placeholder="with one uppercase letter" pattern="(?=.*[A-Z]).{6,}" id="password" name="user_password" />
+		    	</div>
+		    	<div class="button">
+		        	<button type="submit">Sign up</button>
+		    	</div>
+		</form>
+
+
+	</body>
+</html>

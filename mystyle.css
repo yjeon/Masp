@@ -1,0 +1,53 @@
+body{
+	background-color: white;
+	line-height: 150%;
+	margin-left: 50px;
+	margin-top: 0;
+	width: 1200px;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+h1 {
+	color: navy;
+	margin-left: 20px;
+}
+nav{
+	text-align: left;
+}
+nav .gnb {		
+	max-width: 100%;
+	background-color: gray;
+}
+
+nav .gnb ul{
+	overflow: hidden;
+	height: 30px;
+	line-height: 30px;
+	margin:0 auto;
+}
+nav .gnb li{
+	float: left;
+	margin-left: 100px;
+	list-style: none;
+	font-size: .9em;
+}
+nav a{
+	margin: 20px;
+	font-size: .9em;
+    color:#ffffff; 
+    text-decoration:none;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+input:invalid {
+	border: 2px solid red;
+}
+input:invalid +div{
+	display: black;
+}
+input:focus + div{
+	display: none;
+}
+input:active + div{
+	display: blue;
+}
