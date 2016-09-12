@@ -1,8 +1,12 @@
+* {
+	font-family: Arial, Verdana, sans-serif;
+}
 body{
 	margin-left: 20px;
 	margin-right: 20px;
 	background-color: rgb(200, 200, 200);;
 	line-height: 150%;
+	font-size:100%;
 	margin-top: 0;
 	font-family: Verdana, Geneva, sans-serif;
 }
@@ -13,6 +17,18 @@ html{
 
 h1 {
 	color: navy;	
+	font-family: "Times New Roman", monospace;
+	font-size: 42px;
+	color: black;
+	margin-left: 10px;
+}
+.intro img{
+	width: 70%;
+}
+
+.intro p{
+	font-size: 14px;
+	margin-left: 71%;
 }
 hr {
 	width: 100%;
@@ -20,6 +36,7 @@ hr {
 br{
 	width: 100%;
 }
+
 p {
 	color: #ee3e80;
 }
@@ -32,7 +49,7 @@ nav .gnb {
 }
 
 nav .gnb ul{
-	overflow: hidden;
+
 	height: 30px;
 	line-height: 30px;
 	margin:0 auto;
@@ -46,11 +63,14 @@ nav .gnb li{
 nav a{
 	margin-right: 100px;
 	font-size: .9em;
-    color:#ffffff; 
-    text-decoration:none;
-    font-family: Verdana, Geneva, sans-serif;
+    	color:#ffffff; 
+    	text-decoration:none;
+	font-family: Verdana, Geneva, sans-serif;
 }
 
+div .intro {
+	position: absolute;
+}
 label{
 	float: left;
 	clear: left;
