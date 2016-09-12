@@ -16,8 +16,19 @@ p {
 body {
 	background-color: rgb(200, 200, 200);
 	font-size: 100%;
+	margin-top: 0;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
+.intro img{
+	width: 70%;
+}
+
+.intro p{
+	font-size: 14px;
+	margin-left: 71%;
+}
 
 nav {
 	text-align: right;
