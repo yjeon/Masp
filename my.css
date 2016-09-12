@@ -1,0 +1,54 @@
+* {
+	font-family: Arial, Verdana, sans-serif;
+}
+
+h1 {
+	font-family: "Times New Roman", monospace;
+	font-size: 42px;
+	color: black;
+	margin-left: 10px;
+}
+
+p {
+	margin-left: 10px;
+}
+
+body {
+	background-color: rgb(200, 200, 200);
+	font-size: 100%;
+}
+
+
+nav {
+	text-align: right;
+}
+
+nav .gnb {		
+	max-width: 100%;
+	background-color: gray;
+}
+
+nav .gnb ul{
+	height: 30px;
+	line-height: 30px;
+	margin: 0 auto;
+}
+
+nav .gnb li{
+	float: left;
+	margin-left: 100px;
+	list-style: none;
+	font-size: .9em;
+}
+
+nav a{
+	margin: 20px;
+	font-size: .9em;
+	color:#ffffff; 
+	text-decoration:none;
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+div .intro {
+	position: absolute;
+}
