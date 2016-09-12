@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
-		<title>Welcome to !</title>
-	
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<title>Untitled Sign-up Page</title>
 	</head>
 
 	<body>
-		<nav>
-	    	<a href="index.html" alt="">Home</a></li>
+		<nav id="gnb">
+			<div class="gnb">
+				<ul>
+					<a href="index.html"> Home</a>
+				</ul>
+			</div>
 		</nav>
-		<br>
-		<article>
-			<h1>Sign up page</h1>
-			<p lang="en-us"> Test. <br> page name & logo here</p>
-		</article>
-		<br>
-	
 		
-	
-		<form action="sign-up" method="sign-up">
-	    	<div>
+		<h1>Sign-up Page</h1>
+		<p>Hello Welcome here</p>
+		
+		<br>
+		<hr>
+		<br>
+
+		<form action="index.html">
+	    	<div class ="id">
 	        	<label for="id"> ID: </label>
-	        	
 	        	<input type="text" placeholder="Enter ID" id="id" name="user_id" />
 	    	</div>
-	    	<div>
-	        	<label for="mail">E-mail:</label>
-	        	<input type="email" placeholder="Enter E-mail" id="mail" name="user_mail"/>
+	    	<div class="email">
+	        	<label for="email">E-mail:</label>
+	        	<input type="email" placeholder="Enter E-mail address" id="email" name="user_mail"/>
 	    	</div>
-	    	<div>
+	    	<div class="password">
 	    		<label for="password"> Password : 
 	    		</label>
 	        	<input type="password" placeholder="with one uppercase letter" pattern="(?=.*[A-Z]).{6,}" id="password" name="user_password" />
@@ -38,8 +39,8 @@
 	        	<button type="submit">Sign up</button>
 	    	</div>
 		</form>
+
 		<br>
-
-
+		<hr>
 	</body>
 </html>
