@@ -38,9 +38,7 @@ nav a{
     text-decoration:none;
     font-family: Verdana, Geneva, sans-serif;
 }
-.id {
-	display: none;
-}
+
 input:invalid {
 	border: 2px solid red;
 }
