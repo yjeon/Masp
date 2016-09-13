@@ -2,8 +2,10 @@ body{
 	margin-left: 20px;
 	margin-right: 20px;
 	line-height: 150%;
+	margin-top: 0;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 100%;
+	margin-top: 0;
 }
 
 html{
@@ -23,8 +25,30 @@ hr {
 	width: 100%;
 }
 
-p {
+p.intro{
 	color: #ee3e80;
+	margin-left: 10px;
+	transform: rotate(10deg);
+	transition: width 4s;
+	z-index: 1;
+}
+
+.credits{
+	font-size: 80%;
+	color: #ee3e80;
+	margin-left: 10px;
+}
+
+.tbl {
+	width: 100%;
+	margin-top: 600px;
+}
+
+th, td {
+	border: 1px solid black;
+}
+
+table {
 	margin-left: 10px;
 }
 
@@ -32,19 +56,19 @@ nav{
 	text-align: right;
 }
 
-nav#gnb {
+nav .gnb {		
 	max-width: 100%;
 	background-color: #262c26;
 }
 
-nav.gnb ul{
+nav .gnb ul{
 	overflow: hidden;
 	height: 30px;
 	line-height: 30px;
 	margin:0 auto;
 }
 
-nav.gnb li{
+nav .gnb li{
 	float: left;
 	margin-right: 100px;
 	list-style: none;
@@ -55,9 +79,9 @@ nav a{
 	margin: 20px;
 	margin-right: 5%;
 	font-size: .9em;
-    	color:#ffffff; 
-    	text-decoration:none;
-    	font-family: Verdana, Geneva, sans-serif;
+	color:#ffffff; 
+	text-decoration:none;
+	font-family: Verdana, Geneva, sans-serif;
 }
 
 a:hover {
@@ -65,24 +89,19 @@ a:hover {
 }
 
 div .intro {
-	position: relative;
+	position: absolute;
 }
 
 .intro img{
-	-ms-transform: rotate(-4deg); /* IE 9 */
-	-webkit-transform: rotate(-4deg);
-	opacity: 0.9;
-	width: 70%;
+	width: 65%;
 	height: 580px;
 	position:absolute;
 	margin-left: 8px;
-    z-index: 1;
 }
 
 .intro p{
-    align: center;
 	font-size: 14px;
-	margin-left: 80%;
+	margin-left: 71%;
 	margin-right: 8%;
 }
 
@@ -91,27 +110,25 @@ label{
 	clear: left;
 	width: 100px;
 	text-align: left;
-    margin-left: 42%;
-}
-
-div.email, div.password, div.id{
-    position:relative;
+	margin-left: 42%;
 }
 
 form input{
-    position: relative;
+	float: center;
 	text-align: center;
 	width: 200px;
 	background-color: rgb(200, 200, 200);
+	text-align: center;
 }
 
-div.button{
+form .button{
 	width:	50%;
 	float: right;
 	padding: 12px;
 	text-transform: uppercase;
 	position: absolute;
 	left: 50%;
+	transition: background-color 2s, transition 2s;
 }
 
 input:invalid {
@@ -119,7 +136,7 @@ input:invalid {
 }
 
 input:invalid +div{
-	display: block;
+	display: black;
 }
 
 input:focus + div{
@@ -130,3 +147,7 @@ input:active + div{
 	display: blue;
 }
 
+.button:hover {
+	background-color: #FFCCCC;
+	transform: rotate(180deg);
+}
