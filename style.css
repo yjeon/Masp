@@ -2,10 +2,8 @@ body{
 	margin-left: 20px;
 	margin-right: 20px;
 	line-height: 150%;
-	margin-top: 0;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 100%;
-	margin-top: 0;
 }
 
 html{
@@ -34,19 +32,19 @@ nav{
 	text-align: right;
 }
 
-nav .gnb {		
+nav#gnb {
 	max-width: 100%;
 	background-color: #262c26;
 }
 
-nav .gnb ul{
+nav.gnb ul{
 	overflow: hidden;
 	height: 30px;
 	line-height: 30px;
 	margin:0 auto;
 }
 
-nav .gnb li{
+nav.gnb li{
 	float: left;
 	margin-right: 100px;
 	list-style: none;
@@ -67,19 +65,24 @@ a:hover {
 }
 
 div .intro {
-	position: absolute;
+	position: relative;
 }
 
 .intro img{
+	-ms-transform: rotate(-4deg); /* IE 9 */
+	-webkit-transform: rotate(-4deg);
+	opacity: 0.9;
 	width: 70%;
 	height: 580px;
 	position:absolute;
 	margin-left: 8px;
+    z-index: 1;
 }
 
 .intro p{
+    align: center;
 	font-size: 14px;
-	margin-left: 71%;
+	margin-left: 80%;
 	margin-right: 8%;
 }
 
@@ -88,18 +91,21 @@ label{
 	clear: left;
 	width: 100px;
 	text-align: left;
-	margin-left: 42%;
+    margin-left: 42%;
+}
+
+div.email, div.password, div.id{
+    position:relative;
 }
 
 form input{
-	float: center;
+    position: relative;
 	text-align: center;
 	width: 200px;
 	background-color: rgb(200, 200, 200);
-	text-align: center;
 }
 
-form .button{
+div.button{
 	width:	50%;
 	float: right;
 	padding: 12px;
