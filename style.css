@@ -1,153 +1,43 @@
-body{
-	margin-left: 20px;
-	margin-right: 20px;
-	line-height: 150%;
-	margin-top: 0;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 100%;
-	margin-top: 0;
+
+#name{
+	font-size: 40px;
 }
 
-html{
-	min-width: 412px;
-	min-height: 732px;
+#signin{
+	color: #ffffff;
+	font-size: 70%;
+	margin-left: -2%;
 }
 
-h1 {
-	color: navy;	
-	font-family: "Times New Roman", monospace;
-	font-size: 42px;
-	color: black;
-	margin-left: 10px;
-}
-
-hr {
-	width: 100%;
-}
-
-p.intro{
-	color: #ee3e80;
-	margin-left: 10px;
-	transform: rotate(10deg);
-	transition: width 4s;
-	z-index: 1;
-}
-
-.credits{
-	font-size: 80%;
-	color: #ee3e80;
-	margin-left: 10px;
-}
-
-.tbl {
-	width: 100%;
-	margin-top: 600px;
-}
-
-th, td {
-	border: 1px solid black;
-}
-
-table {
-	margin-left: 10px;
-}
-
-nav{
+#signup{
+	color: #ffffff;
+	font-size: 70%;
 	text-align: right;
 }
 
-nav .gnb {		
+.topbar{
 	max-width: 100%;
-	background-color: #262c26;
-}
-
-nav .gnb ul{
-	overflow: hidden;
-	height: 30px;
-	line-height: 30px;
-	margin:0 auto;
-}
-
-nav .gnb li{
-	float: left;
-	margin-right: 100px;
-	list-style: none;
-	font-size: .9em;
-}
-
-nav a{
-	margin: 20px;
+	background-color: #262e26;
+	margin-left: 5%;
 	margin-right: 5%;
-	font-size: .9em;
-	color:#ffffff; 
-	text-decoration:none;
-	font-family: Verdana, Geneva, sans-serif;
 }
 
-a:hover {
-	background-color: #CD5C5C;
-}
-
-div .intro {
-	position: absolute;
-}
-
-.intro img{
-	width: 65%;
-	height: 580px;
-	position:absolute;
-	margin-left: 8px;
-}
-
-.intro p{
-	font-size: 14px;
-	margin-left: 71%;
-	margin-right: 8%;
-}
-
-label{
-	float: left;
-	clear: left;
-	width: 100px;
-	text-align: left;
-	margin-left: 42%;
-}
-
-form input{
-	float: center;
-	text-align: center;
-	width: 200px;
-	background-color: rgb(200, 200, 200);
-	text-align: center;
-}
-
-form .button{
-	width:	50%;
-	float: right;
-	padding: 12px;
-	text-transform: uppercase;
-	position: absolute;
+#toptitle{
 	left: 50%;
-	transition: background-color 2s, transition 2s;
+	position: relative;
+	width: 200px;
+	text-align: center;
+	margin-left: -100px;
+	border-bottom: 4px solid #000000;
 }
 
-input:invalid {
-	border: 2px solid red;
-}
-
-input:invalid +div{
-	display: black;
-}
-
-input:focus + div{
-	display: none;
-}
-
-input:active + div{
-	display: blue;
-}
-
-.button:hover {
-	background-color: #FFCCCC;
-	transform: rotate(180deg);
+#map{
+	width: 90%;
+	height: 100%;
+	margin: 0;
+	position: relative;
+	background-color: blue;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 20px;
 }

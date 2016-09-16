@@ -1,44 +1,35 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>Masp</title>
 	</head>
-
 	<body>
-		<nav id="gnb">
-			<div class="gnb">
+		<header>
+			<nav class="topbar"> 
 				<ul>
-					<a href="login_css.html">Login</a>
-					<a href="signup_css.html">Sign up</a>
+					<a href="login_css.html" id="signin">Sign in</a>
+					<a href="signup_css.html" id="signup">Sign up</a>
 				</ul>
+			</nav>
+			<div id="toptitle">
+				<h1 id="name">Masp</h1>
+				<h6 id="credits">using Google Maps and Yelp API</h6>
 			</div>
-		</nav>
-		
-		<h1><b>Masp</b></h1>
-		<div class="head">
-			<p class="credits">by Hansol Shin and Yoonchan Jeon</p>
-
-			<hr width="100%">
-		</div>
-																				
-		<div class="intro">
-			<img src="files/map.jpeg"/>
-			<p class="intro">
-			Masp is an online map utilizing Google Maps API to generate POIs along a user's route.</br>
-			</br>
-			To check out github for the project, click <a href="https://github.com/yjeon/Masp">here</a>
-			</p>
-		</div>
-
-		<div class="tbl">
-			<table>
-			<tr>
-			<th> Mock data </th>
-			<th> Mock data 2 </th>
-			</tr>
-			</table>
-		</div>
-
+			<div id="map">
+				<script>
+					var map;
+					function initMap() {
+						map = new google.maps.Map(document.getElementById('map'), {
+							  	center: {lat: -34.397, lng: 150.644},
+								zoom: 8
+						});
+					}
+				</script>
+				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6WqHcYx8ppFi1q0dXyrg6wHo3zszNibY&callback=initMap"
+				async defer></script>
+			</div>
+		</header>
 	</body>
 </html>
+
