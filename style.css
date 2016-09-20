@@ -3,12 +3,25 @@
 }
 
 #modaltrigger{
-	margin-left: 90%;
+    float: right;
+    padding-right: 5px;
+    font-size: 90%;
+}
+
+#signup{
+    color: #ffffff;
+    float: right;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 90%;
 }
 
 #settings{
 	color: #ffffff;
-	margin-left: 10px;
+    float: right;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 90%;
 }
 
 .topbar{

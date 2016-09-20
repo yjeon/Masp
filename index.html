@@ -14,6 +14,8 @@
 				<ul>
 					<!-- once clicked, let them type in their email -->
 					<!-- TODO: Clean out styling to a css file -->
+					<a href="settings.html" id="settings">Settings</a>
+                    <a href="#signupmodal" id="signup">Sign up</a>
 					<a href="#loginmodal" id="modaltrigger">Login</a>
 					<div id="loginmodal" style="display:none;">
 					    <h1 id="logintitle">Login</h1>
@@ -32,11 +34,9 @@
 					  $('#loginform').submit(function(e){
 					    return false;
 					  });
-					  
 					  $('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
 					});
 					</script>
-					<a href="settings.html" id="settings">Settings</a>
 				</ul>
 			</nav>
 			
