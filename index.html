@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:javascript="http://www.w3.org/1999/xhtml">
 	<head>
 		<link rel="stylesheet" type="text/css" href="style.css">
   		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
@@ -10,13 +10,51 @@
 	<!-- TODO: Move <script>foo</script> to .js -->
 	<body>
 		<header>
-			<nav class="topbar"> 
+			<nav class="topbar">
+				<!-- TODO: Clean out styling to a css file -->
 				<ul>
 					<!-- once clicked, let them type in their email -->
-					<!-- TODO: Clean out styling to a css file -->
-					<a href="settings.html" id="settings">Settings</a>
-                    <a href="#signupmodal" id="signup">Sign up</a>
-					<a href="#loginmodal" id="modaltrigger">Login</a>
+					<!-- Signup under construction -->
+                    <a href="#" id="signup">Sign up</a>
+
+					<!-- Basic setup of the following div block is from w3schools.com/howto/howto_js_fullscreen_overlay.asp -->
+					<!-- Modifications done to suit our needs -->
+					<div id="myNav" class="overlay">
+						<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+						<div class="overlay-content">
+                            <a href="#">THEME</a>
+                            <div id="bluerect"></div>
+							<div id="brownrect"></div>
+							<div id="whiterect"></div>
+						</div>
+                        <script>
+							document.getElementById("bluerect").addEventListener("click", changeThemeBlue);
+							document.getElementById("brownrect").addEventListener("click", changeThemeBrown);
+							document.getElementById("whiterect").addEventListener("click", changeThemeWhite);
+							function changeThemeBlue() {
+							    document.body.style.backgroundColor = "blue";
+							}
+							function changeThemeBrown() {
+								document.body.style.backgroundColor = "brown";
+							}
+							function changeThemeWhite() {
+								document.body.style.backgroundColor = "white";
+							}
+						</script>
+					</div>
+                    <span style="font-size:26px;cursor:pointer;color:white;" onclick="openNav()">&#9776;</span>
+					<script>
+						/* Open when someone clicks on the span element */
+						function openNav() {
+							document.getElementById("myNav").style.width = "30%";
+						}
+
+						/* Close when someone clicks on the "x" symbol inside the overlay */
+						function closeNav() {
+							document.getElementById("myNav").style.width = "0%";
+						}
+					</script>
+					<a href="#loginmodal" id="modaltrigger">Sign in</a>
 					<div id="loginmodal" style="display:none;">
 					    <h1 id="logintitle">Login</h1>
 					    <form id="loginform" name="loginform" method="post" action="index.html">
@@ -27,6 +65,17 @@
 					      <input type="password" placeholder="Password" name="password" id="password" class="txtfield" tabindex="2">
 					      
 					      <div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3"></div>
+                            <script>
+                                // Changes Sign in, Sign up to Welcome, Settings.
+								document.getElementById("loginbtn").addEventListener("click", removeSignup);
+								function removeSignup() {
+									var signup = document.getElementById("signup");
+									signup.href = "";
+									signup.innerHTML = "";
+                                    signup.id = "";
+									document.getElementById("modaltrigger").innerHTML = "Welcome";
+								}
+							</script>
 					    </form>
 					</div>
 					<script type="text/javascript">
@@ -52,6 +101,16 @@
 				<br /> <br />
 				<!-- if button.click -> maximize map to the browser -->
 				<button id="go">Go!</button>
+				<script>
+					// Regenerate map with given address.
+					// Need to look at api doc.
+					document.getElementById("go").addEventListener("click", returnMap);
+					function returnMap() {
+						var start = document.getElementById("address1").value;
+						var end   = document.getElementById("address2").value;
+                        return
+					}
+				</script>
 			</div>
 
 			<div id="map">
