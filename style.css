@@ -86,14 +86,14 @@ html {
 	transform: translate(-50%, 0);
 }
 
-#username {
+#username_su {
 	position: relative;
 	margin-top: 120px;
 	left: 50%;
 	transform: translate(-50%, 0);
 }
 
-#password {
+#password_su {
 	position: relative;
 	margin-top: 10px;
 	left: 50%;
