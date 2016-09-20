@@ -14,10 +14,12 @@
 }
 
 .topbar{
+	margin-top: -16px;
 	max-width: 100%;
 	background-color: #262e26;
 	margin-left: 5%;
 	margin-right: 5%;
+	height: 40px;
 }
 
 #toptitle{
