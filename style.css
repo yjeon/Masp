@@ -1,153 +1,271 @@
-body{
-	margin-left: 20px;
-	margin-right: 20px;
-	line-height: 150%;
-	margin-top: 0;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 100%;
-	margin-top: 0;
+html {
+    overflow-y: hidden;
+    font-family: Ebrima;
 }
 
-html{
-	min-width: 412px;
-	min-height: 732px;
+#name{
+	font-size: 40px;
 }
 
-h1 {
-	color: navy;	
-	font-family: "Times New Roman", monospace;
-	font-size: 42px;
-	color: black;
-	margin-left: 10px;
+#modaltrigger{
+    float: right;
+    padding-right: 20px;
+    font-size: 18px;
+    padding-top: 5px;
+    text-decoration: none;
 }
 
-hr {
-	width: 100%;
+#signup{
+    color: #ffffff;
+    float: right;
+    padding-right: 20px;
+    padding-top: 5px;
+    font-size: 18px;
+    text-decoration: none;
 }
 
-p.intro{
-	color: #ee3e80;
-	margin-left: 10px;
-	transform: rotate(10deg);
-	transition: width 4s;
-	z-index: 1;
+#settings{
+	color: #ffffff;
+    float: right;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 90%;
 }
 
-.credits{
-	font-size: 80%;
-	color: #ee3e80;
-	margin-left: 10px;
-}
-
-.tbl {
-	width: 100%;
-	margin-top: 600px;
-}
-
-th, td {
-	border: 1px solid black;
-}
-
-table {
-	margin-left: 10px;
-}
-
-nav{
-	text-align: right;
-}
-
-nav .gnb {		
+.topbar{
+	margin-top: -16px;
 	max-width: 100%;
-	background-color: #262c26;
-}
-
-nav .gnb ul{
-	overflow: hidden;
-	height: 30px;
-	line-height: 30px;
-	margin:0 auto;
-}
-
-nav .gnb li{
-	float: left;
-	margin-right: 100px;
-	list-style: none;
-	font-size: .9em;
-}
-
-nav a{
-	margin: 20px;
+	background-color: #262e26;
+	margin-left: 5%;
 	margin-right: 5%;
-	font-size: .9em;
-	color:#ffffff; 
-	text-decoration:none;
-	font-family: Verdana, Geneva, sans-serif;
+	height: 40px;
+}
+.topbar a{
+	color: white;
 }
 
-a:hover {
-	background-color: #CD5C5C;
-}
-
-div .intro {
-	position: absolute;
-}
-
-.intro img{
-	width: 65%;
-	height: 580px;
-	position:absolute;
-	margin-left: 8px;
-}
-
-.intro p{
-	font-size: 14px;
-	margin-left: 71%;
-	margin-right: 8%;
-}
-
-label{
-	float: left;
-	clear: left;
-	width: 100px;
-	text-align: left;
-	margin-left: 42%;
-}
-
-form input{
-	float: center;
-	text-align: center;
+#toptitle{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
 	width: 200px;
-	background-color: rgb(200, 200, 200);
+	text-align: center;
+	display: block;
+	border-bottom: 4px solid #000000;
+}
+
+#commands{
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 800px;
+	margin-top: 30px;
 	text-align: center;
 }
 
-form .button{
-	width:	50%;
-	float: right;
-	padding: 12px;
-	text-transform: uppercase;
+#map {
 	position: absolute;
 	left: 50%;
-	transition: background-color 2s, transition 2s;
+	transform: translate(-50%, 0);
+	width: 89.3%;
+	height: 70%;
+	margin-top: 30px;
 }
 
-input:invalid {
-	border: 2px solid red;
+#bot {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+	margin-top: 37%;
+	width: 89.3%;
 }
 
-input:invalid +div{
-	display: black;
+#logintitle {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
 }
 
-input:focus + div{
-	display: none;
+#username{
+	position: relative;
+	margin-top: 120px;
+	left: 50%;
+	transform: translate(-50%, 0);
 }
 
-input:active + div{
-	display: blue;
+#password{
+	position: relative;
+	margin-top: 10px;
+	left: 50%;
+	transform: translate(-50%, 0);
 }
 
-.button:hover {
-	background-color: #FFCCCC;
-	transform: rotate(180deg);
+#loginbtn {
+	position: relative;
+	margin-top: 40px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+#bluerect {
+    width: 200px;
+    height: 100px;
+    background: blue;
+    left: 50%;
+    margin-top: 50px;
+    transform: translate(-50%, 0);
+    position: absolute;
+}
+
+#brownrect {
+    width: 200px;
+    height: 100px;
+    background: brown;
+    left: 50%;
+    margin-top: 200px;
+    transform: translate(-50%, 0);
+    position: relative;
+}
+
+#whiterect {
+    width: 200px;
+    height: 100px;
+    background: white;
+    left: 50%;
+    margin-top: 50px;
+    transform: translate(-50%, 0);
+    position: relative;
+}
+
+.flatbtn:hover {
+  color: #fff;
+  background-color: #73c437;
+}
+.flatbtn:active {
+  -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow:inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow:inset 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/** custom login button **/
+.flatbtn-blu { 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  color: #edf4f9;
+  text-decoration: none;
+  background-color: #4f94cf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 12px 26px 12px 26px;
+  line-height: normal;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.flatbtn-blu:hover {
+  color: #fff;
+  background-color: #519dde;
+}
+.flatbtn-blu:active {
+  -webkit-box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow:inset 0 1px 5px rgba(0, 0, 0, 0.1);
+  box-shadow:inset 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/** modal window styles **/
+#lean_overlay {
+	position: fixed;
+  z-index:100;
+  top: 0px;
+  left: 0px;
+  height:100%;
+  width:100%;
+  background: #000;
+  display: none;
+}
+
+#loginmodal {
+  width: 300px;
+  padding: 60px 20px;
+  background: #f3f6fa;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+#loginform { /* no default styles */ }
+
+#loginform label { display: block; font-size: 1.1em; font-weight: bold; color: #7c8291; margin-bottom: 3px; }
+
+/* ALl of the lines below from an external css source @ w3schools.com/howto/ */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
 }
