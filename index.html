@@ -2,8 +2,8 @@
 <html xmlns:javascript="http://www.w3.org/1999/xhtml">
 	<head>
 		<link rel="stylesheet" type="text/css" href="style.css">
-  		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-  		<script type="text/javascript" charset="utf-8" src="js/jquery.leanModal.min.js"></script>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
 		<title>Masp</title>
 	</head>
 
@@ -27,66 +27,28 @@
 							<div id="brownrect"></div>
 							<div id="whiterect"></div>
 						</div>
-  						<script>
-							document.getElementById("bluerect").addEventListener("click", changeThemeBlue);
-							document.getElementById("brownrect").addEventListener("click", changeThemeBrown);
-							document.getElementById("whiterect").addEventListener("click", changeThemeWhite);
-							function changeThemeBlue() {
-							    document.body.style.backgroundColor = "blue";
-							}
-							function changeThemeBrown() {
-								document.body.style.backgroundColor = "brown";
-							}
-							function changeThemeWhite() {
-								document.body.style.backgroundColor = "white";
-							}
-						</script>
+						<script src="js/theme.js"></script>
 					</div>
-  					<span style="font-size:26px;cursor:pointer;color:white;" onclick="openNav()">&#9776;</span>
-					<script>
-						/* Open when someone clicks on the span element */
-						function openNav() {
-							document.getElementById("myNav").style.width = "30%";
-						}
-
-						/* Close when someone clicks on the "x" symbol inside the overlay */
-						function closeNav() {
-							document.getElementById("myNav").style.width = "0%";
-						}
-					</script>
+  					<span style="font-size:26px;cursor:pointer;color:white;" onclick="openNav()">&#9776;<script src="js/nav.js"></script></span>
 					<a href="#loginmodal" id="modaltrigger">Sign in</a>
 					<div id="loginmodal" style="display:none;">
 						<h1 id="logintitle">Login</h1>
 						<form id="loginform" name="loginform" method="post" action="index.html">
-						<label for="username"></label>
-						<input type="text" placeholder="Email" name="username" id="username" class="txtfield" tabindex="1">
-						<label for="password"></label>
-						<input type="password" placeholder="Password" name="password" id="password" class="txtfield" tabindex="2">
-						<div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3"></div>
-							<script>
-								// Changes Sign in, Sign up to Welcome, Settings.
-								document.getElementById("loginbtn").addEventListener("click", removeSignup);
-								function removeSignup() {
-									var signup = document.getElementById("signup");
-									signup.href = "";
-									signup.innerHTML = "";
-									signup.id = "";
-									document.getElementById("modaltrigger").innerHTML = "Welcome";
-								}
-							</script>
+							<label for="username"></label>
+							<input type="text" placeholder="Email" name="username" id="username" class="txtfield" tabindex="1">
+								<label for="password"></label>
+							<input type="password" placeholder="Password" name="password" id="password" class="txtfield" tabindex="2">
+							<div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3"></div>
+					  		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+					  		<script type="text/javascript" charset="utf-8" src="js/jquery.leanModal.min.js"></script>
+							<script src="js/login.js"></script>
 						</form>
 					</div>
-					<script type="text/javascript">
-					$(function(){
-						$('#loginform').submit(function(e){
-							return false;
-						});
-						$('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
-					});
-					</script>
+					<script type="text/javascript" src="js/login.js"></script>
+					<script type="text/javascript" src="js/firebase.js"></script>
 				</ul>
 			</nav>
-			
+
 			<div id="toptitle">
 				<h1 id="name">Masp</h1>
 				<h6 id="credits">using Google Maps and Yelp API</h6>
@@ -125,7 +87,7 @@
 								lat: position.coords.latitude,
 								lng: position.coords.longitude
 							};
-							
+
 							//var infoWindow = new google.maps.InfoWindow({map: map});
 							//infoWindow.setPosition(pos);
 							//infoWindow.setContent('You are here!');
