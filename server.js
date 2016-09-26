@@ -47,8 +47,6 @@
     firebase.auth().onAuthStateChanged(firebaseUser => {
     	if(firebaseUser){
     		console.log(firebaseUser);
-            btnSignUp.classList.add('hide');
-            loginbtn.classList.add('hide');
     		btnLogOut.classList.remove('hide');
     	}
     	else{
