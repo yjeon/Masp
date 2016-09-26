@@ -16,7 +16,7 @@
     const txtEmail    = document.getElementById('txtEmail');
     const txtPassword = document.getElementById('txtPassword');
     const loginbtn    = document.getElementById('loginbtn');
-    //const btnSignUp   = document.getElementById('btnSignUp');
+    const btnSignUp   = document.getElementById('btnSignUp');
     const btnLogout   = document.getElementById('btnLogOut');
 
      	//add login event
@@ -47,12 +47,22 @@
     firebase.auth().onAuthStateChanged(firebaseUser => {
     	if(firebaseUser){
     		console.log(firebaseUser);
+            console.log("here we go!");
+            console.log(firebaseUser.email);
     		btnLogOut.classList.remove('hide');
+            
+            
+
     	}
     	else{
     		console.log('not logged in');
     		btnLogOut.classList.add('hide');
+            
     	}
+            
+        
+
+
     });
 }());
 
