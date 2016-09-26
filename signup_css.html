@@ -1,42 +1,47 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
+		<link href="https://fonts.googleapis.com/ css?family=Roboto:300,500" rel="stylesheet">
+		<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<title>Untitled Sign-up Page</title>
+		
+		<title>Masp Sign Up Page</title>
 	</head>
 
 	<body>
 		<nav id="gnb">
 			<div class="gnb">
 				<ul>
-					<a href="index.html"> Home</a>
+					<a href="index.html"> Home </a>
 				</ul>
 			</div>
-		</nav>
-		
-		<h1>Sign-up Page</h1>
-		<p>Hello Welcome here</p>
+		</nav>		
+		<h1>Sign Up Masp</h1>
+		<p>Hello Welcome Masp!</p>
 		
 		<hr></hr>
 
-		<form action="index.html">
-	    	<div class ="id">
-	        	<label for="id"> ID: </label>
-	        	<input type="text" placeholder="Enter ID" id="id" name="user_id" />
-	    	</div>
-	    	<div class="email">
-	        	<label for="email">E-mail:</label>
-	        	<input type="email" placeholder="Enter E-mail address" id="email" name="user_mail"/>
-	    	</div>
-	    	<div class="password_su">
-	    		<label for="password"> Password : 
-	    		</label>
-	        	<input type="password" placeholder="with one uppercase letter" pattern="(?=.*[A-Z]).{6,}" id="password_su" name="user_password_su" />
-	    	</div>
-	    	<div class="button">
-	        	<button type="submit">Sign up</button>
-	    	</div>
-		</form>
+		<div class="container">
+			<label for="email">Email : </label>
+			<input id = "txtEmail" type="email" placeholder="Enter Email here"/>
+			<label for="password">Password : </label>
+			<input id = "txtPassword" type="password" placeholder="with one uppercase letter" pattern="(?=.*[A-Z]).{6,}"/>
+			
+			<button id="btnLogIn" class="btn btn-action">
+				Log in
+			</button>
+			<button id="btnSignUp" class="btn btn-secondary">
+				Sign up
+			</button>
+			<button id="btnLogOut" class="btn btn-action hide">
+				Log out
+			</button>
+		</div>
+
+		<script src="server.js"></script>
+
 
 		<br></br>
 		<hr>
