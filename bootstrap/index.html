@@ -10,25 +10,35 @@
         <meta name="author" content="">
         <link rel="icon" href="favicon.ico">
 
-        <link href="bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="starter-template.css" rel="stylesheet">
 
     <body>
         <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-            <a class="navbar-brand" href="https://yjeon.github.io/Masp/index.html">Masp</a>
-            <ul class="nav navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
+            <div id="navbar">
+                <a class="navbar-brand" href="https://yjeon.github.io/Masp/index.html">Masp</a>
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.google.com">Sign in</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.google.com">Sign up</a>
+                    </li>
+                </ul>
         </nav>
 
         <div class="container">
@@ -36,42 +46,9 @@
                 <h1>Masp</h1>
                 <p class="lead">Using Google Maps and Yelp API</p>
             </div>
+
             <div id="map">
-                <script>
-                    function initMap() {
-                        var map = new google.maps.Map(document.getElementById('map'), {
-                            center: {lat: -34.397, lng: 150.644},
-                            zoom: 6,
-                            disableDefaultUI: true,
-                            styles:[{
-                                featureType: 'all',
-                                stylers: [{
-                                    saturation: -40
-                                }]
-                            }]
-                        });
-                        if (navigator.geolocation) {
-                            navigator.geolocation.getCurrentPosition(function(position) {
-                            var pos = {
-                                lat: position.coords.latitude,
-                                lng: position.coords.longitude
-                            };
-                            map.setCenter(pos);
-                            map.setZoom(16);
-                            }, function() {
-                            handleLocationError(true, infoWindow, map.getCenter());
-                            });
-                        } else {
-                            handleLocationError(false, infoWindow, map.getCenter());
-                        }
-                    }
-                    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-                        infoWindow.setPosition(pos);
-                        infoWindow.setContent(browserHasGeolocation ?
-                            'Error: The Geolocation service failed.' :
-                            'Error: Your browser doesn\'t support geolocation.');
-                    }
-                </script>
+                <script src="../js/googlemaps.js"></script>
                 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6WqHcYx8ppFi1q0dXyrg6wHo3zszNibY&callback=initMap" async defer></script>
             </div>
         </div>
@@ -82,8 +59,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
-        <script src="../../dist/js/bootstrap.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     </body>
 </html>
