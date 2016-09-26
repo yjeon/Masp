@@ -2,7 +2,7 @@
 <html xmlns:javascript="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>Masp</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
@@ -14,7 +14,9 @@
         <header>
         <nav class="topbar">
             <ul>
+                <a href="" id="btnLogOut">Log out</a>
                 <a href="signup_css.html" id="signup">Sign up</a>
+                
                 <div id="myNav" class="overlay">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                     <div class="overlay-content">
@@ -25,23 +27,36 @@
                     </div>
                     <script src="js/theme.js"></script>
                 </div>
+
                 <span style="font-size:26px;cursor:pointer;color:white;" onclick="openNav()">&#9776;<script src="js/nav.js"></script></span>
-                <a href="#loginmodal" id="modaltrigger">Sign in</a>
+                <a href="#loginmodal" id="modaltrigger">Log in</a>
+                
                 <div id="loginmodal" style="display:none;">
                     <h1 id="logintitle">Login</h1>
                     <form id="loginform" name="loginform" method="post" action="index.html">
-                        <label for="username"></label>
-                        <input type="text" placeholder="Email" name="username" id="username" class="txtfield" tabindex="1">
-                            <label for="password"></label>
-                        <input type="password" placeholder="Password" name="password" id="password" class="txtfield" tabindex="2">
-                        <div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3"></div>
+                        <!-- email -->
+                        <label for="txtEmail"></label>
+                        <input type="email" placeholder="Email" id="txtEmail" class="txtEmail" tabindex="1">
+                        
+                        <!-- password -->
+                        <label for="password"></label>
+                        <input type="password" placeholder="Password" id="txtPassword" class="txtPassword" tabindex="2">
+                        
+                        <!-- btnLogIn -->
+                        <div class="center">
+                        <input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3">
+                        </div>
+
+                        
                         <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
                         <script type="text/javascript" charset="utf-8" src="js/jquery.leanModal.min.js"></script>
                         <script src="js/login.js"></script>
                     </form>
+                    
                 </div>
+                <script src="server.js"></script>
                 <script type="text/javascript" src="js/login.js"></script>
-                <script type="text/javascript" src="js/firebase.js"></script>
+                <!-- <script type="text/javascript" src="js/firebase.js"></script> -->
             </ul>
         </nav>
 
@@ -84,9 +99,9 @@
                             lng: position.coords.longitude
                         };
 
-                        //var infoWindow = new google.maps.InfoWindow({map: map});
+                        var infoWindow = new google.maps.InfoWindow({map: map});
                         //infoWindow.setPosition(pos);
-                        //infoWindow.setContent('You are here!');
+                        //infoWindow.setftent('You are here!');
                         map.setCenter(pos);
                         map.setZoom(16);
                         }, function() {
