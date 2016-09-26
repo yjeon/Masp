@@ -16,17 +16,16 @@
   	const btnSignUp   = document.getElementById('btnSignUp');
   	const btnLogOut   = document.getElementById('btnLogOut');
   	const aurh        = firebase.auth();
-    const promise;
 
   	//add login event
   	btnLogIn.addEventListener('click', e => {
-		promise = auth.signInWithEmailAndPassword(email,pass);
+		const promise = auth.signInWithEmailAndPassword(email,pass);
 		promise.catch(e => console.log(e.message));
   	});
 
   	//Add Sign up
  	btnSignUp.addEventListener('click', e => {
-		promise = auth.createUserWithEmailAndPassword(email,pass);
+		const promise = auth.createUserWithEmailAndPassword(email,pass);
 		promise.catch(e => console.log(e.message));
   	});
 
