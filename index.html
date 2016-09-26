@@ -2,16 +2,10 @@
 <html xmlns:javascript="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>Masp</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="style.css">
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
 	</head>
 
 	<body>
-        <header>
         <nav class="topbar">
             <ul>
                 <a href="signup_css.html" id="signup">Sign up</a>
@@ -23,9 +17,8 @@
                         <div id="brownrect"></div>
                         <div id="whiterect"></div>
                     </div>
-                    <script src="js/theme.js"></script>
                 </div>
-                <span style="font-size:26px;cursor:pointer;color:white;" onclick="openNav()">&#9776;<script src="js/nav.js"></script></span>
+                <span style="font-size:26px;cursor:pointer;color:white;" onclick="openNav()">&#9776;</span>
                 <a href="#loginmodal" id="modaltrigger">Sign in</a>
                 <div id="loginmodal" style="display:none;">
                     <h1 id="logintitle">Login</h1>
@@ -35,13 +28,8 @@
                             <label for="password"></label>
                         <input type="password" placeholder="Password" name="password" id="password" class="txtfield" tabindex="2">
                         <div class="center"><input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3"></div>
-                        <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-                        <script type="text/javascript" charset="utf-8" src="js/jquery.leanModal.min.js"></script>
-                        <script src="js/login.js"></script>
                     </form>
                 </div>
-                <script type="text/javascript" src="js/login.js"></script>
-                <script type="text/javascript" src="js/firebase.js"></script>
             </ul>
         </nav>
 
@@ -51,65 +39,26 @@
         </div>
 
         <div id="commands">
-            <!-- add textbox to interact with the map. (address from and to) -->
             <input id="address1" type="search" placeholder="From"/> to
             <input id="address2" type="search" placeholder="To"/>
             <br /> <br />
-            <!-- if button.click -> maximize map to the browser -->
             <button id="go">Go!</button>
         </div>
 
-        <div id="map">
-            <script>
-                /**
-                 * Below lines are sample js code from google maps api for js
-                 */
-                function initMap() {
-                    var map = new google.maps.Map(document.getElementById('map'), {
-                        center: {lat: -34.397, lng: 150.644},
-                        zoom: 6,
-                        disableDefaultUI: true,
-                        styles:[{
-                            featureType: 'all',
-                            stylers: [{
-                                saturation: -40
-                            }]
-                        }]
-                    });
+        <div id="map"></div>
 
-                    if (navigator.geolocation) {
-                        navigator.geolocation.getCurrentPosition(function(position) {
-                        var pos = {
-                            lat: position.coords.latitude,
-                            lng: position.coords.longitude
-                        };
+        <!-- CDN scripts -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/jquery.leanModal.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6WqHcYx8ppFi1q0dXyrg6wHo3zszNibY&callback=initMap" async defer></script>
 
-                        //var infoWindow = new google.maps.InfoWindow({map: map});
-                        //infoWindow.setPosition(pos);
-                        //infoWindow.setContent('You are here!');
-                        map.setCenter(pos);
-                        map.setZoom(16);
-                        }, function() {
-                        handleLocationError(true, infoWindow, map.getCenter());
-                        });
-                    } else {
-                        handleLocationError(false, infoWindow, map.getCenter());
-                    }
-                }
-
-                function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-                    infoWindow.setPosition(pos);
-                    infoWindow.setContent(browserHasGeolocation ?
-                        'Error: The Geolocation service failed.' :
-                        'Error: Your browser doesn\'t support geolocation.');
-                }
-            </script>
-            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6WqHcYx8ppFi1q0dXyrg6wHo3zszNibY&callback=initMap" async defer></script>
-        </div>
-
-        <div id="bottombar">
-            <hr id="bot">
-        </div>
-        </header>
+        <!-- local js -->
+        <script src="js/login.js"></script>
+        <script src="js/googlemaps.js"></script>
+        <script src="js/theme.js"></script>
+        <script src="js/nav.js"></script>
+        <script src="js/server.js"></script>
 	</body>
 </html>

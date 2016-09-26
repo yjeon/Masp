@@ -2,9 +2,10 @@
 document.getElementById("loginbtn").addEventListener("click", removeSignup);
 function removeSignup() {
     var signup = document.getElementById("signup");
+    var signin = document.getElementById("modaltrigger");
     signup.href = "";
     signup.innerHTML = "";
-    signup.id = "";
+    signup.id = logout;
     document.getElementById("modaltrigger").innerHTML = "Welcome";
 }
 
