@@ -32,6 +32,16 @@ html {
     text-decoration: none;
 }
 
+#btnLogOut{
+    color: #ffffff;
+    float: right;
+    padding-right: 20px;
+    padding-top: 5px;
+    font-size: 18px;
+    text-decoration: none;
+    
+}
+
 #settings{
 	color: #ffffff;
     float: right;
@@ -41,7 +51,7 @@ html {
 }
 
 .topbar{
-	margin-top: -16px;
+	/*margin-top: -16px;*/
 	max-width: 100%;
 	background-color: #262e26;
 	margin-left: 5%;
@@ -94,14 +104,14 @@ html {
 	transform: translate(-50%, 0);
 }
 
-#username{
+.txtEmail{
 	position: relative;
 	margin-top: 120px;
 	left: 50%;
 	transform: translate(-50%, 0);
 }
 
-#password{
+.txtPassword{
 	position: relative;
 	margin-top: 10px;
 	left: 50%;
