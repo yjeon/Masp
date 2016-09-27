@@ -43,9 +43,8 @@
     	else{
     		console.log('not logged in');
     		btnLogOut.classList.add('hide');
-            document.getElementById('modaltrigger').setAttribute("a", "visible");
-
-   	}
+            document.getElementById('modaltrigger').style.visibility('visible');
+        }
     });
 }());
 
