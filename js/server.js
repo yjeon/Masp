@@ -18,9 +18,16 @@
     btnLogIn.addEventListener('click', e => {
         const email   = txtEmail.value;
         const pass    = txtPassword.value;
+<<<<<<< HEAD
         firebase.auth().signInWithEmailAndPassword(email,pass).catch(function(error) {
             var errorMessage = error.message;
             throw error;
+=======
+        const auth    = firebase.auth();
+        const promise = auth.signInWithEmailAndPassword(email,pass);
+        promise.catch(validate(error) {
+            throw 'not working';
+>>>>>>> parent of 9b29a88... test
         });
     });
 
