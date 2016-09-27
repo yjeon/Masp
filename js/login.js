@@ -10,6 +10,7 @@ function removeSignup() {
 }
 */
 
+/*
 $(function(){
 	$('#loginform').submit(function(e){
 		return false;
@@ -20,3 +21,4 @@ $(function(){
 function authLogin() {
 
 }
+*/
