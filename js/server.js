@@ -1,6 +1,8 @@
 (function(){
+    var firebase;
+
     // Initialize firebase
-    var config = {
+    const config = {
         apiKey: "AIzaSyCuWAvUnbjSAGD7XqansTe2tUoqPORncl0",
         authDomain: "masp-9a79d.firebaseapp.com",
         databaseURL: "https://masp-9a79d.firebaseio.com",
