@@ -22,6 +22,7 @@
             var errorMessage = error.message;
             console.log(errorMessage);
             throw error;
+            if(error == null) throw 'great!';
         });
     });
 
