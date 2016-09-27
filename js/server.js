@@ -26,7 +26,6 @@
         const auth = firebase.auth();
         const promise = auth.signInWithEmailAndPassword(email,pass);
         promise.catch(e => console.log(e.message));
-
     });
 
     btnLogOut.addEventListener('click', e => {
@@ -44,7 +43,6 @@
     	else{
     		console.log('not logged in');
     		btnLogOut.classList.add('hide');
-            
     	}
     });
 }());
