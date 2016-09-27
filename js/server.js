@@ -14,33 +14,29 @@
     const btnLogIn    = document.getElementById('loginbtn');
     const btnLogOut   = document.getElementById('btnLogOut');
 
-    // user
-    var user          = firebase.auth().currentUser;
-    if(!user) {
-        // Asynchronously signs in using email and password
-        btnLogIn.addEventListener('click', e => {
-            const email = txtEmail.value;
-            const pass = txtPassword.value;
-            firebase.auth().signInWithEmailAndPassword(email, pass).catch(function (error) {
-                throw error;
-            });
+    // Asynchronously signs in using email and password
+    btnLogIn.addEventListener('click', e => {
+        const email = txtEmail.value;
+        const pass = txtPassword.value;
+        firebase.auth().signInWithEmailAndPassword(email, pass).catch(function (error) {
+            throw error;
         });
+    });
 
-        btnLogOut.addEventListener('click', e => {
-            firebase.auth().signOut();
-        });
+    btnLogOut.addEventListener('click', e => {
+        firebase.auth().signOut();
+    });
 
-        firebase.auth().onAuthStateChanged(firebaseUser => {
-            if (firebaseUser) {
-                console.log(firebaseUser);
-                console.log("here we go!");
-                console.log(firebaseUser.email);
-                btnLogOut.classList.remove('hide');
-            }
-            else {
-                console.log('not logged in');
-                btnLogOut.classList.add('hide');
-            }
-        });
-    }
-}());
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+        if (firebaseUser) {
+            console.log(firebaseUser);
+            console.log("here we go!");
+            console.log(firebaseUser.email);
+            btnLogOut.classList.remove('hide');
+        }
+        else {
+            console.log('not logged in');
+            btnLogOut.classList.add('hide');
+        }
+    });
+});
