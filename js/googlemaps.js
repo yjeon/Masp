@@ -10,6 +10,7 @@ function initMap() {
             }]
         }]
     });
+
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
         var pos = {
@@ -24,6 +25,18 @@ function initMap() {
     } else {
         handleLocationError(false, infoWindow, map.getCenter());
     }
+
+    var address1 = new google.maps.places.Autocomplete(
+        (document.getElementById('address1')), {
+            types: ['geocode']
+        }
+    );
+
+    var address2 = new google.maps.places.Autocomplete(
+        (document.getElementById('address2')), {
+            types: ['geocode']
+        }
+    );
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
