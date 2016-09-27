@@ -16,27 +16,28 @@
 
     // Asynchronously signs in using email and password
     btnLogIn.addEventListener('click', e => {
-        const email = txtEmail.value;
-        const pass = txtPassword.value;
-        firebase.auth().signInWithEmailAndPassword(email, pass).catch(function (error) {
+        const email   = txtEmail.value;
+        const pass    = txtPassword.value;
+        firebase.auth().signInWithEmailAndPassword(email,pass).catch(function(error) {
+            var errorMessage = error.message;
             throw error;
         });
     });
 
     btnLogOut.addEventListener('click', e => {
-        firebase.auth().signOut();
+     	firebase.auth().signOut();
     });
 
     firebase.auth().onAuthStateChanged(firebaseUser => {
-        if (firebaseUser) {
-            console.log(firebaseUser);
+    	if(firebaseUser){
+    		console.log(firebaseUser);
             console.log("here we go!");
             console.log(firebaseUser.email);
-            btnLogOut.classList.remove('hide');
-        }
-        else {
-            console.log('not logged in');
-            btnLogOut.classList.add('hide');
-        }
+    		btnLogOut.classList.remove('hide');
+    	}
+    	else{
+    		console.log('not logged in');
+    		btnLogOut.classList.add('hide');
+    	}
     });
 });
