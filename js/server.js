@@ -19,9 +19,7 @@
         const email   = txtEmail.value;
         const pass    = txtPassword.value;
         firebase.auth().signInWithEmailAndPassword(email,pass).catch(function(error) {
-            if(error != null) {
-                throw 'error!';
-            }
+            throw error;
         });
     });
 
