@@ -30,15 +30,6 @@
 
     });
 
-    // //Add Sign up
-    // btnSignUp.addEventListener('click', e => {
-    //     const email = txtEmail.value;
-    //     const pass = txtPassword.value;
-    //     const auth = firebase.auth();
-    //     const promise = auth.createUserWithEmailAndPassword(email,pass);
-    //     promise.catch(e => console.log(e.message));
-    // });
-
     btnLogOut.addEventListener('click', e => {
      	firebase.auth().signOut();
     });
@@ -50,8 +41,6 @@
             console.log("here we go!");
             console.log(firebaseUser.email);
     		btnLogOut.classList.remove('hide');
-            
-            
 
     	}
     	else{
@@ -59,11 +48,11 @@
     		btnLogOut.classList.add('hide');
             
     	}
-            
-        
 
 
     });
+
+
 }());
 
 
