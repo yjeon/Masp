@@ -1,4 +1,5 @@
 // Changes Sign in, Sign up to Welcome, Settings.
+/*
 document.getElementById("loginbtn").addEventListener("click", removeSignup);
 function removeSignup() {
     var signup = document.getElementById("signup");
@@ -7,6 +8,7 @@ function removeSignup() {
     var logout = document.getElementById("btnLogOut");
     logout.style.display = "block";
 }
+*/
 
 $(function(){
 	$('#loginform').submit(function(e){
