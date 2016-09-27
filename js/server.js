@@ -39,6 +39,7 @@
             console.log("here we go!");
             console.log(firebaseUser.email);
     		btnLogOut.classList.remove('hide');
+            document.getElementById('modaltrigger').setAttribute("a", "hidden");
     	}
     	else{
     		console.log('not logged in');
