@@ -24,6 +24,7 @@
         const email = txtEmail.value;
         const pass = txtPassword.value;
         const auth = firebase.auth();
+        // Asynchronously signin user
         const promise = auth.signInWithEmailAndPassword(email,pass);
         promise.catch(e => console.log(e.message));
     });
@@ -31,7 +32,6 @@
     btnLogOut.addEventListener('click', e => {
      	firebase.auth().signOut();
     });
-
 
     firebase.auth().onAuthStateChanged(firebaseUser => {
     	if(firebaseUser){
@@ -43,7 +43,7 @@
     	else{
     		console.log('not logged in');
     		btnLogOut.classList.add('hide');
-    	}
+   	}
     });
 }());
 
