@@ -18,12 +18,9 @@
     btnLogIn.addEventListener('click', e => {
         const email   = txtEmail.value;
         const pass    = txtPassword.value;
-        firebase.auth().signInWithEmailAndPassword(email,pass).catch(function(error) {
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            console.log(errorMessage);
-        });
-        //promise.catch(e => console.log(e.message));
+        const auth    = firebase.auth();
+        const promise = auth.signInWithEmailAndPassword(email,pass);
+        promise.catch(e => console.log(e.message));
     });
 
     btnLogOut.addEventListener('click', e => {
