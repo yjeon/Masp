@@ -1,13 +1,11 @@
 (function(){
-
     //Initialize firebase
     const config = { 
-    apiKey: "AIzaSyCuWAvUnbjSAGD7XqansTe2tUoqPORncl0",
-    authDomain: "masp-9a79d.firebaseapp.com",
-    databaseURL: "https://masp-9a79d.firebaseio.com",
-    storageBucket: "masp-9a79d.appspot.com",
-    messagingSenderId: "686393566018"
-
+        apiKey: "AIzaSyCuWAvUnbjSAGD7XqansTe2tUoqPORncl0",
+        authDomain: "masp-9a79d.firebaseapp.com",
+        databaseURL: "https://masp-9a79d.firebaseio.com",
+        storageBucket: "masp-9a79d.appspot.com",
+        messagingSenderId: "686393566018"
     }; firebase.initializeApp(config);
 
     // HTML elements
@@ -15,8 +13,8 @@
     const txtPassword = document.getElementById('txtPassword');
     const btnSignUp   = document.getElementById('btnSignUp');
 
-    const loginbtn    = document.getElementById('loginbtn');
-    const btnLogout   = document.getElementById('btnLogOut');
+    const btnLogIn    = document.getElementById('loginbtn');
+    const btnLogOut   = document.getElementById('btnLogOut');
 
     //Add Sign up
     btnSignUp.addEventListener('click', e => {
@@ -24,10 +22,9 @@
         const pass = txtPassword.value;
         const auth = firebase.auth();
         const promise = auth.createUserWithEmailAndPassword(email,pass);
-        promise.then(e => window.location.href="index.html");
-        
-        promise.catch(e => console.log(e.message));
 
+        promise.then(e => window.location.href="index.html");
+        promise.catch(e => console.log(e.message));
     });
 
     firebase.auth().onAuthStateChanged(firebaseUser => {

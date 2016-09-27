@@ -1,11 +1,11 @@
 (function(){
     // Initialize firebase
     const config = { 
-    apiKey: "AIzaSyCuWAvUnbjSAGD7XqansTe2tUoqPORncl0",
-    authDomain: "masp-9a79d.firebaseapp.com",
-    databaseURL: "https://masp-9a79d.firebaseio.com",
-    storageBucket: "masp-9a79d.appspot.com",
-    messagingSenderId: "686393566018"
+        apiKey: "AIzaSyCuWAvUnbjSAGD7XqansTe2tUoqPORncl0",
+        authDomain: "masp-9a79d.firebaseapp.com",
+        databaseURL: "https://masp-9a79d.firebaseio.com",
+        storageBucket: "masp-9a79d.appspot.com",
+        messagingSenderId: "686393566018"
     }; firebase.initializeApp(config);
 
     // HTML elements
@@ -20,7 +20,9 @@
         const pass    = txtPassword.value;
         const auth    = firebase.auth();
         const promise = auth.signInWithEmailAndPassword(email,pass);
-        promise.catch(e => console.log(e.message));
+        promise.catch(validate(error) {
+            throw 'not working';
+        });
     });
 
     btnLogOut.addEventListener('click', e => {
@@ -40,5 +42,3 @@
     	}
     });
 }());
-
-
