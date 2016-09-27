@@ -39,11 +39,11 @@
             console.log("here we go!");
             console.log(firebaseUser.email);
     		btnLogOut.classList.remove('hide');
+            $('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
     	}
     	else{
     		console.log('not logged in');
     		btnLogOut.classList.add('hide');
-            document.getElementById('modaltrigger').style.visibility('visible');
         }
     });
 }());
