@@ -103,7 +103,6 @@ function changeThemeWhite() {
     const txtPassword = document.getElementById('txtPassword');
     const loginbtn    = document.getElementById('loginbtn');
     const btnSignUp   = document.getElementById('btnSignUp');
-    const linkSignUp  = document.getElementById('linkSignUp');
     const btnSignOut  = document.getElementById('btnSignOut');
     const modaltrigger= document.getElementById('modaltrigger');
 
@@ -136,7 +135,7 @@ function changeThemeWhite() {
             console.log("here we go!");
             console.log(firebaseUser.email);
             btnSignOut.classList.remove('hidden');
-            linkSignUp.classList.add('hidden');
+            btnSignUp.classList.add('hidden');
             modaltrigger.classList.add('hidden');
             $('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
         }
@@ -144,7 +143,7 @@ function changeThemeWhite() {
             console.log('not logged in');
             btnSignOut.classList.add('hidden');
             loginbtn.classList.remove('hidden');
-            linkSignUp.classList.remove('hidden');
+            btnSignUp.classList.remove('hidden');
             modaltrigger.classList.remove('hidden');
         }
     });
