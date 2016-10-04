@@ -15,23 +15,27 @@ html {
     text-decoration: none;
 }
 
-#signup{
-    color: #ffffff;
-    float: right;
-    padding-right: 20px;
-    padding-top: 5px;
-    font-size: 18px;
-    text-decoration: none;
+.hidden{
+    display: none;
 }
 
-#btnLogOut{
+#linkSignUp{
     color: #ffffff;
     float: right;
     padding-right: 20px;
     padding-top: 5px;
     font-size: 18px;
     text-decoration: none;
+    cursor: pointer;
+}
 
+#btnSignOut{
+    color: #ffffff;
+    float: right;
+    padding-right: 20px;
+    padding-top: 5px;
+    font-size: 18px;
+    text-decoration: none;
 }
 
 #settings{

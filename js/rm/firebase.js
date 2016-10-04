@@ -1,12 +1,17 @@
+/*
+ * This file is not used...
+ */
+
+// Basic set up of the firebase stored here.
 var config = {
 		apiKey: "AIzaSyCuWAvUnbjSAGD7XqansTe2tUoqPORncl0",
-	    authDomain: "masp-9a79d.firebaseapp.com",
-	    databaseURL: "https://masp-9a79d.firebaseio.com",
-	    storageBucket: "masp-9a79d.appspot.com",
-	    messagingSenderId: "686393566018"
+    authDomain: "masp-9a79d.firebaseapp.com",
+    databaseURL: "https://masp-9a79d.firebaseio.com",
+    storageBucket: "masp-9a79d.appspot.com",
+    messagingSenderId: "686393566018"
 };
+firebase.initializeApp(config); // Start of firebase service
 
-firebase.initializeApp(config);
 var todosRef = firebase.database().ref('todos');
 
 todosRef.on('child_added', function(data) {
