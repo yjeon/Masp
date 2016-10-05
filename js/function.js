@@ -158,6 +158,16 @@ function changeThemeWhite() {
  * Created by iamroot on 9/26/16.
  */
 function initMap() {
+    var directionsService = new google.maps.DirectionsService;
+    var directionsDisplay = new google.maps.DirectionsRenderer;
+
+    var origin_place_id   = null;
+    var destin_place_id   = null;
+    var travel_mode       = 'DRIVING';
+
+    var origin_input      = document.getElementById('address1');
+    var destin_input      = document.getElementById('address2');
+
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -34.397, lng: 150.644},
         zoom: 6,
@@ -169,6 +179,7 @@ function initMap() {
             }]
         }]
     });
+    directionsDisplay.setMap(map);
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
@@ -177,7 +188,7 @@ function initMap() {
                 lng: position.coords.longitude
             };
             map.setCenter(pos);
-            map.setZoom(16);
+            map.setZoom(4);
         }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
         });
@@ -185,17 +196,59 @@ function initMap() {
         handleLocationError(false, infoWindow, map.getCenter());
     }
 
-    var address1 = new google.maps.places.Autocomplete(
-        (document.getElementById('address1')), {
-            types: ['geocode']
-        }
-    );
+    var origin_autocomplete = new google.maps.places.Autocomplete(origin_input);
+    var destin_autocomplete = new google.maps.places.Autocomplete(destin_input);
+    origin_autocomplete.bindTo('bounds', map);
+    destin_autocomplete.bindTo('bounds', map);
 
-    var address2 = new google.maps.places.Autocomplete(
-        (document.getElementById('address2')), {
-            types: ['geocode']
+    function expandViewportToFitPlace(map, place) {
+        if(place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+        } else {
+            map.setCenter(place.geometry.location);
         }
-    );
+    }
+
+    origin_autocomplete.addListener('place_changed', function() {
+        var place = origin_autocomplete.getPlace();
+        if(!place.geometry) {
+            window.alert("place contains no geom.");
+            return;
+        }
+        expandViewportToFitPlace(map, place);
+
+        origin_place_id = place.place_id;
+        route(origin_place_id, destin_place_id, travel_mode, directionsService, directionsDisplay);
+    });
+
+    destin_autocomplete.addListener('place_changed', function() {
+        var place = destin_autocomplete.getPlace();
+        if(!place.geometry) {
+            window.alert("place contains no geom.");
+            return;
+        }
+        expandViewportToFitPlace(map, place);
+
+        destin_place_id = place.place_id;
+        route(origin_place_id, destin_place_id, travel_mode, directionsService, directionsDisplay);
+    });
+
+    function route(origin_place_id, destin_place_id, travel_mode, directionsService, directionsDisplay) {
+        if(!origin_place_id || !destin_place_id) {
+            return;
+        }
+        directionsService.route({
+            origin: {'placeid': origin_place_id},
+            destination: {'placeid': destin_place_id},
+            travelMode: travel_mode
+        }, function(response, status) {
+            if(status === 'OK') {
+                directionsDisplay.setDirections(response);
+            } else {
+                window.alert('Directions request failed due to ' + status);
+            }
+        });
+    }
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
