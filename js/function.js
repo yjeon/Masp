@@ -58,7 +58,15 @@ $(function(){
 
 // Pops up the sign up window
 function signUp() {
-    window.open("signup_css.html",'signup_css.html','width=450px,height=500px,top=100px,left=50px');
+    document.getElementById("signUpContainer").style.display = "block";
+    document.getElementById("signInContainer").classList.add('hidden');
+    document.getElementById("signUpContainer").classList.remove('hidden');
+}
+
+function signIn() {
+    document.getElementById("signInContainer").style.display = "block";
+    document.getElementById("signUpContainer").classList.add('hidden');
+    document.getElementById("signInContainer").classList.add('hidden');
 }
 
 /* Open when someone clicks on the span element */
@@ -137,7 +145,7 @@ function changeThemeWhite() {
             btnSignOut.classList.remove('hidden');
             btnSignUp.classList.add('hidden');
             modaltrigger.classList.add('hidden');
-            $('#modaltrigger').leanModal({ top: 110, overlay: 0.45, closeButton: ".hidemodal" });
+            document.getElementById('signInContainer').classList.add('hidden');
         }
         else{
             console.log('not logged in');
@@ -170,7 +178,7 @@ function initMap() {
 
     var map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: -34.397, lng: 150.644},
-        zoom: 6,
+        zoom: 12,
         disableDefaultUI: true,
         styles:[{
             featureType: 'all',
@@ -188,7 +196,7 @@ function initMap() {
                 lng: position.coords.longitude
             };
             map.setCenter(pos);
-            map.setZoom(4);
+            map.setZoom(8);
         }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
         });
