@@ -1,3 +1,10 @@
+Update for HW4
+====================================================================================================================
+1) Registration was moved to react.<br>
+2) Login is moved to react.<br>
+3) Searching map on google maps works, but routing doesn't work yet.<br>
+Note) Migrating to react as in terms of the whole project wasn't done, but rather using basic dom render..
+
 Scenarios for SWE432 Project 
 ====================================================================================================================
 1) Registration.<br>
@@ -17,5 +24,9 @@ Other things to implement
 a) react & bootstrap & etc<br>
    &emsp;-> Need to come up with some ideas as to which frameworks to use... But 0 knowledge on different frameworks.<br>
 
+<<<<<<< HEAD
 b) D3 visualization <br>
    &emsp; -> Need to fix the way to store the data on Firebase<br>
+=======
+
+>>>>>>> origin/hw-submissions
