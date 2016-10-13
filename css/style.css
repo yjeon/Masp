@@ -3,6 +3,33 @@ html {
     font-family: Ebrima;
 }
 
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+.masp-export, .masp-export svg {
+  position: absolute;
+}
+
+.masp-export svg {
+  width: 60px;
+  height: 20px;
+  padding-right: 100px;
+  font: 10px sans-serif;
+}
+
+.masp-export circle {
+  fill: brown;
+  stroke: black;
+  stroke-width: 1.5px;
+}
+
+
 #name{
 	font-size: 40px;
 }

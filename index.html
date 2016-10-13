@@ -3,24 +3,29 @@
 	<head>
 		<title>Masp</title>
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+       <!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
 	    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
         <script type="text/javascript">
             function mySign() {
                 window.open("signup_css.html",'signup_css.html','width=450px,height=500px,top=100px,left=50px');
             }
         </script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <!-- <script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q&libaries=places"></script> -->
 	</head>
 
 	<body>
         <header>
             <nav class="topbar">
                 <ul>
-                    <a href="" id="btnLogOut">Log out</a>
+                    <!-- style="display:none;" -->
+                    <a href="" id="btnLogOut" >Log out</a>
                     <a id="signup" onclick="mySign()" style="float: right; font-size: 18px;padding-right: 20px; padding-top: 5px; cursor: pointer;">Sign up</a>
+
                     <div id="myNav" class="overlay">
                         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                         <div class="overlay-content">
@@ -30,11 +35,11 @@
                             <div id="whiterect"></div>
                         </div>
                     </div>
-
                     <span style="font-size:26px;cursor:pointer;color:white;" onclick="openNav()">&#9776;<script src="js/nav.js"></script></span>
 
-                    <a href="#loginmodal" id="modaltrigger">Log in</a>
 
+                    <!-- login form -->
+                    <a href="#loginmodal" id="modaltrigger">Log in</a>
                     <div id="loginmodal" style="display:none;">
                         <h1 id="logintitle">Login</h1>
                         <form id="loginform" name="loginform" method="post" >
@@ -50,26 +55,27 @@
                             <div class="center">
                                 <input type="submit" name="loginbtn" id="loginbtn" class="flatbtn-blu hidemodal" value="Log In" tabindex="3">
                             </div>
-
                         </form>
                     </div>
+
                 </ul>
             </nav>
 
             <div id="toptitle">
                 <h1 id="name">Masp</h1>
-                <h6 id="credits">using Google Maps and Yelp API</h6>
+                <h6 id="credits">Wifi password note by using Google Maps</h6>
             </div>
 
             <div id="commands">
                 <!-- add textbox to interact with the map. (address from and to) -->
-                <input id="address1" type="search" placeholder="From"/> to
-                <input id="address2" type="search" placeholder="To"/>
+                <input id='mapSearch1' size = "50" type="search"/>
                 <br /> <br />
                 <!-- if button.click -> maximize map to the browser -->
                 <button id="go">Go!</button>
+                
             </div>
-
+            <button onclick="showDiv()">See the history</button>
+            <div class="chart" id='c' style="display:none;"></div>
             <div id="map">
             </div>
         </header>
@@ -85,5 +91,6 @@
         <script src="js/theme.js"></script>
         <script src="js/nav.js"></script>
         <script src="js/server.js"></script>
+        <script src="masp-export.json"></script>
 	</body>
 </html>

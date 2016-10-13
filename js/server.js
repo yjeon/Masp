@@ -24,9 +24,11 @@
         const email = txtEmail.value;
         const pass = txtPassword.value;
         const auth = firebase.auth();
-        // Asynchronously signin user
+
+        // Asynchronously signin userf
         const promise = auth.signInWithEmailAndPassword(email,pass);
         promise.catch(e => console.log(e.message));
+        //writeUserData(txtEmail);
     });
 
     btnLogOut.addEventListener('click', e => {
@@ -46,6 +48,69 @@
     		btnLogOut.classList.add('hide');
         }
     });
+
+
+    const database = firebase.database();
+    const userEmail = document.getElementById('txtEmail');
+    
+    function writeUserData(userEmail){
+        var firebaseRef = database.ref();
+        var em = userEmail.value;
+        firebaseRef.child("email").push().set(em);
+    }
+
+
+    const goButton = document.getElementById('go');
+    const search = document.getElementById('mapSearch1');
+    goButton.addEventListener('click', e => {
+        writeSearchData(search);
+    });
+
+    //TODO: if it is not a location, make it not save into.
+    function writeSearchData(search){
+        var firebaseRef = database.ref();
+        var searchVar = search.value;
+        firebaseRef.child("search").push().set(searchVar);
+    };
+
+
+    const dbRefObject = database.ref().child('search');
+    
+    dbRefObject.on('value', snap =>{
+        console.log(snap.val());
+
+        const li = document.createElement('li');
+        li.innerText = snap.val();
+        //console.log(' hello');
+        //ul.appendChild(li);
+    });
+
+    
+
+
+
+
+
+
+
+
+
+
 }());
+
+var data1 = [4, 8, 15, 16, 23, 42];
+//var data1 = li;
+
+    d3.select(".chart")
+      .selectAll("div")
+        .data(data1)
+      .enter().append("div")
+        .style("width", function(d) 
+               { return d * 10 + "px"; })
+        .text(function(d) { return d; });
+
+    function showDiv() {
+       document.getElementById('c').style.display = "block";
+    }
 
 
