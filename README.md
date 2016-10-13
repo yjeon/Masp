@@ -19,10 +19,14 @@ Scenarios for SWE432 Project
 
 Other things to implement
 ====================================================================================================================
-a) Widgets<br>
-   &emsp;-> Basically get data from yelp api (need to look at the api doc to come up with a more concrete idea)<br>
-   &emsp;&emsp;Then the data from the api needs to generate some sort of widget that shows reviews, etc of a poi.<br>
-b) react & bootstrap & etc<br>
+
+
+a) react & bootstrap & etc<br>
    &emsp;-> Need to come up with some ideas as to which frameworks to use... But 0 knowledge on different frameworks.<br>
 
+<<<<<<< HEAD
+b) D3 visualization <br>
+   &emsp; -> Need to fix the way to store the data on Firebase<br>
+=======
 
+>>>>>>> origin/hw-submissions
