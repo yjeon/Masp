@@ -12,11 +12,11 @@ class SignInModalTrigger extends Component {
     this.closeModal = this.closeModal.bind(this);
   }
 
-  openModal () {
+  openModal() {
     this.setState({open: true});
   }
 
-  closeModal () {
+  closeModal() {
     this.setState({open: false});
   }
 
@@ -33,7 +33,7 @@ class SignInModalTrigger extends Component {
             <input className="modal-input" id="modal-sign-in-password-input" type="password" placeholder="Enter your password here" pattern="(?=.*[A-Z]).{6,}"/>
             <br />
             <br />
-            <button className="modal-button">Submit</button>
+            <button className="modal-button" id="modal-sign-in-submit-button">Submit</button>
             <br />
             <br />
             <button className="modal-button" onClick={this.closeModal}>Close</button>
