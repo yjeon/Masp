@@ -2,8 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SignInModalTrigger from './SignInModalTrigger';
 import SignUpModalTrigger from './SignUpModalTrigger';
-import firebase from 'firebase';
-import ReactFire from 'reactfire';
+import './FirebaseHandler.js';
 import './style.css';
 
 ReactDOM.render(

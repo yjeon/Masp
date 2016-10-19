@@ -23,8 +23,5 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "engines": {
-    "node": ">=0.10.28",
-    "npm": ">=1.4.28"
+  }
 }

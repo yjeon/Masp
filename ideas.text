@@ -15,4 +15,5 @@ src/index.js
 -> Renders all react components
 
 src/SignInModalTrigger.js
+-> 
 src/SignUpModalTrigger.js

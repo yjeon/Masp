@@ -13,12 +13,10 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
     document.getElementById('sign-out-link').classList.remove('hidden');
     document.getElementById('sign-up-link').classList.add('hidden');
     document.getElementById('sign-in-link').classList.add('hidden');
-    console.log("signed in");
   } else {
     document.getElementById('sign-out-link').classList.add('hidden');
     document.getElementById('sign-up-link').classList.remove('hidden');
     document.getElementById('sign-in-link').classList.remove('hidden');
-    console.log("not signed in");
   }
 });
 
