@@ -6,9 +6,12 @@
     "react-scripts": "0.6.1"
   },
   "dependencies": {
+    "firebase": "^3.5.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-forms": "^2.0.0-beta33",
+    "react-google-maps": "^6.0.1",
+    "react-modal": "^1.5.2",
     "react-native": "^0.35.0",
     "react-native-modal": "^0.4.0"
   },

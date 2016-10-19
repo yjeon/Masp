@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import NavLoader from './NavLoader';
-import FootLoader from './FootLoader';
+import SignInModalTrigger from './SignInModalTrigger';
+import SignUpModalTrigger from './SignUpModalTrigger';
 import './style.css';
 
 ReactDOM.render(
-  <NavLoader text="masp"/>,
-  document.getElementById('navbar-logo-container')
+  <SignInModalTrigger />,
+  document.getElementById('sign-in-link')
 );
 
 ReactDOM.render(
-  <FootLoader />,
-  document.getElementById('footer-container')
+  <SignUpModalTrigger />,
+  document.getElementById('sign-up-link')
 );
