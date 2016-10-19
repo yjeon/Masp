@@ -1,0 +1,18 @@
+public/index.html
+-> Landing page
+-> Includes script for google maps
+
+src/style.css
+-> Style Sheet
+
+src/FirebaseHandler.js
+-> Initialize firebase
+
+src/FootLoader.js
+-> Renders the footer of the page
+
+src/index.js
+-> Renders all react components
+
+src/SignInModalTrigger.js
+src/SignUpModalTrigger.js
