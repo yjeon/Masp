@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 
-
 class SignInModalTrigger extends Component {
+
   constructor() {
     super();
     this.state = {

@@ -21,8 +21,8 @@
           <div class="navbar-links">
             <div id="sign-in-link" class="navbar-links"></div>
             <div id="sign-up-link" class="navbar-links"></div>
-            <div id="sign-out-link">
-              <a class="navbar-items hidden" href="#">Sign out</a>
+            <div id="sign-out-link" class="navbar-links hidden">
+              <a class="navbar-items" href="#">Sign out</a>
             </div>
           </div>
         </div>
@@ -63,12 +63,16 @@
     document.getElementById('sign-out-link').addEventListener('click', e => {
       firebase.auth().signOut();
     });
+  </script>
+  <!--
+
 
     document.getElementById('modal-sign-in-submit-button').addEventListener('click', e => {
       firebase.auth().signInWithEmailAndPassword(document.getElementById('modal-sign-in-mail-input').value, document.getElementById('modal-sign-in-password-input').value).catch(e => console.log(e.message));
       console.log("initiating");
     });
   </script>
+  -->
   <!-- Adding Google Maps to html -->
   <script>
     function initMap() {
