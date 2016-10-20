@@ -50,7 +50,6 @@
       "js",
       "jsx"
     ],
-    "verbose": "true",
-    "testRunner": "jasmine1"
+    "verbose": "true"
   }
 }

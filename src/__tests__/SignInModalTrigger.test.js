@@ -1,8 +1,9 @@
 import React from 'react';
 import SignInModalTrigger from '../SignInModalTrigger';
 import SignUpModalTrigger from '../SignUpModalTrigger';
-import firebase from 'firebase';
 import renderer from 'react-test-renderer';
+
+jest.mock('firebase');
 
 function scryRenderedDOMComponentsWithId(tree, id) {
   return TestUtils.findAllInRenderedTree(tree, function(inst) {
@@ -61,4 +62,3 @@ test('Sign-up-modal popped up when clicked', () => {
   tree = component.toJSON();
   expect(tree).toMatchSnapshot();
 })
-
