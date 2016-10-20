@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 import firebase from 'firebase';
+//var firebase = require('firebase');
 
 class SignInModalTrigger extends Component {
   constructor() {
@@ -39,7 +40,7 @@ class SignInModalTrigger extends Component {
   render () {
     return (
       <div>
-        <a className="navbar-items" onClick={this.openModal} href="#">Sign in</a>
+        <a id="sign-in-open-modal" className="navbar-items" onClick={this.openModal} href="#">Sign in</a>
         <Modal className="sign-in-modal" isOpen={this.state.open}>
           <h1 className="modal-title">Sign in</h1>
           <div className="modal-inner-form">
@@ -52,7 +53,7 @@ class SignInModalTrigger extends Component {
             <button className="modal-button" id="modal-sign-in-submit-button" onClick={this.submit}>Submit</button>
             <br />
             <br />
-            <button className="modal-button" onClick={this.closeModal}>Close</button>
+            <button className="modal-button" id="modal-sign-in-close-button" onClick={this.closeModal}>Close</button>
           </div>
         </Modal>
       </div>

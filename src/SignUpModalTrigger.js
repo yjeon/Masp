@@ -40,7 +40,7 @@ class SignUpModalTrigger extends Component {
   render () {
     return (
       <div>
-        <a className="navbar-items" onClick={this.openModal} href="#">Sign up</a>
+        <a className="navbar-items" id="sign-up-open-modal" onClick={this.openModal} href="#">Sign up</a>
         <Modal className="sign-up-modal" isOpen={this.state.open}>
           <h1 className="modal-title">Sign Up</h1>
           <div className="modal-inner-form">
@@ -53,7 +53,7 @@ class SignUpModalTrigger extends Component {
         <button className="modal-button" id="modal-sign-up-submit-button" onClick={this.submit}>Submit</button>
             <br />
             <br />
-            <button className="modal-button" onClick={this.closeModal}>Close</button>
+            <button className="modal-button" id="modal-sign-up-close-button" onClick={this.closeModal}>Close</button>
           </div>
         </Modal>
       </div>
