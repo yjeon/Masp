@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SignInModalTrigger from './SignInModalTrigger';
 import SignUpModalTrigger from './SignUpModalTrigger';
+import LinkHoverEffectHandler from './LinkHoverEffectHandler';
 import './FirebaseHandler.js';
 import './style.css';
 

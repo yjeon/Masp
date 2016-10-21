@@ -40,20 +40,47 @@ class SignInModalTrigger extends Component {
   render () {
     return (
       <div>
-        <a id="sign-in-open-modal" className="navbar-items" onClick={this.openModal} href="#">Sign in</a>
-        <Modal className="sign-in-modal" isOpen={this.state.open}>
-          <h1 className="modal-title">Sign in</h1>
-          <div className="modal-inner-form">
-            <input className="modal-input" id="modal-sign-in-mail-input" type="email" placeholder="Enter your email here"/>
+        <a
+          id="sign-in-open-modal"
+          className="navbar-items"
+          onClick={this.openModal}
+          href="#"
+        >Sign in</a>
+        <Modal
+          className="sign-in-modal"
+          isOpen={this.state.open}>
+          <h1
+            className="modal-title"
+        >Sign in</h1>
+          <div
+            className="modal-inner-form">
+            <input
+              className="modal-input"
+              id="modal-sign-in-mail-input"
+              type="email"
+              placeholder="Enter your email here"/>
             <br />
             <br />
-            <input className="modal-input" id="modal-sign-in-password-input" type="password" placeholder="Enter your password here" pattern="(?=.*[A-Z]).{6,}"/>
+            <input
+              className="modal-input"
+              id="modal-sign-in-password-input"
+              type="password"
+              placeholder="Enter your password here"
+              pattern="(?=.*[A-Z]).{6,}"/>
             <br />
             <br />
-            <button className="modal-button" id="modal-sign-in-submit-button" onClick={this.submit}>Submit</button>
+            <button
+              className="modal-button"
+              id="modal-sign-in-submit-button"
+              onClick={this.submit}
+            >Submit</button>
             <br />
             <br />
-            <button className="modal-button" id="modal-sign-in-close-button" onClick={this.closeModal}>Close</button>
+            <button
+              className="modal-button"
+              id="modal-sign-in-close-button"
+              onClick={this.closeModal}
+            >Close</button>
           </div>
         </Modal>
       </div>
