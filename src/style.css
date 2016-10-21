@@ -1,0 +1,157 @@
+body {
+  margin: 0 auto;
+  background-color: rgba(12,13,14,0.86);
+}
+
+.navbar {
+  background-color: rgba(12,13,14,0.86);
+  display: inline-block;
+  font-size: 13px;
+  line-height: 1;
+  text-decoration: none;
+  width: 100%;
+}
+
+.navbar-wrapper {
+  height: 34px;
+  margin: 0 auto;
+  padding-left: 0;
+  position: relative;
+  text-align: left;
+  width: 1060px;
+}
+
+.navbar-logo-container {
+  background-image: url("../src/resource/compass.svg");
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-size: auto 17px;
+  text-decoration: none;
+  color: #e4e6e8;
+  vertical-align: top;
+  line-height: 1;
+  display: inline-block;
+  margin: 0 auto;
+  background-position-y: -3px;
+  padding-top: 10px;
+  border: 0;
+  height: 34px;
+}
+
+.navbar-links-container {
+  position: absolute;
+  text-decoration: none;
+  color: #e4e6e8;
+  vertical-align: top;
+  line-height: 1;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+  height: 34px;
+  right: 0;
+}
+
+.navbar-logo-text {
+  color: #e4e6e8;
+  text-decoration: none;
+  vertical-align: top;
+  margin-left: 24px;
+  top: 20px;
+}
+
+.navbar-links {
+  text-decoration: none;
+  text-align: right;
+  vertical-align: top;
+  padding-top: 5px;
+  font-size: 13px;
+  left: 50%;
+  display: inline-block;
+}
+
+.navbar-items {
+  color: #e4e6e8;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.sign-up-modal {
+  height: 220px;
+  width: 600px;
+  margin: auto;
+  background-color: gray;
+}
+
+.sign-in-modal {
+  height: 220px;
+  width: 600px;
+  margin: auto;
+  background-color: gray;
+}
+
+.modal-title {
+  white-space: nowrap;
+  margin-top: 40%;
+  left: 50%;
+  text-align: center;
+}
+
+.modal-input {
+  margin-left: 200px;
+  width: 200px;
+}
+
+.modal-button {
+  margin-left: 200px;
+  width: 220px;
+}
+
+.top-margin {
+  line-height: 2px;
+}
+
+.main-info-container {
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.name-title {
+  size: 20px;
+}
+
+.maps-container {
+  height: 400px;
+  margin-top: 20px;
+}
+
+#map {
+  height: 100%;
+  position: relative;
+  margin: 0 60px;
+}
+
+.footer-container {
+  color: #7c9192;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  height: 80px;
+}
+
+.footer-items-container {
+  padding: 10px;
+  background-color: rgba(12,13,14,0.86);
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.footer-links {
+  text-decoration: none;
+  color: green;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,129 @@
+exports[`test Sign-in-modal opened correctly (using react-test-renderer) 1`] = `
+<div>
+  <a
+    className="navbar-items"
+    href="#"
+    id="sign-in-open-modal"
+    onClick={[Function bound openModal]}>
+    Sign in
+  </a>
+  <noscript />
+</div>
+`;
+
+exports[`test Sign-in-modal opened correctly and closed correctly 1`] = `
+<div>
+  <a
+    className="navbar-items"
+    href="#"
+    id="sign-in-open-modal"
+    onClick={[Function bound openModal]}>
+    Sign in
+  </a>
+  <noscript />
+</div>
+`;
+
+exports[`test Sign-in-modal opened correctly and closed correctly 2`] = `
+<div>
+  <a
+    className="navbar-items"
+    href="#"
+    id="sign-in-open-modal"
+    onClick={[Function bound openModal]}>
+    Sign in
+  </a>
+  <noscript />
+</div>
+`;
+
+exports[`test Sign-in-modal opened correctly and submit working correctly 1`] = `
+<div>
+  <a
+    className="navbar-items"
+    href="#"
+    id="sign-in-open-modal"
+    onClick={[Function bound openModal]}>
+    Sign in
+  </a>
+  <noscript />
+</div>
+`;
+
+exports[`test Sign-in-modal opened correctly and submit working correctly 2`] = `
+<div>
+  <a
+    className="navbar-items"
+    href="#"
+    id="sign-in-open-modal"
+    onClick={[Function bound openModal]}>
+    Sign in
+  </a>
+  <noscript />
+</div>
+`;
+
+exports[`test Sign-up-modal opened correctly (using react-test-renderer) 1`] = `
+<div>
+  <a
+    className="navbar-items"
+    href="#"
+    id="sign-up-open-modal"
+    onClick={[Function bound openModal]}>
+    Sign up
+  </a>
+  <noscript />
+</div>
+`;
+
+exports[`test Sign-up-modal opened correctly and closed correctly 1`] = `
+<div>
+  <a
+    className="navbar-items"
+    href="#"
+    id="sign-up-open-modal"
+    onClick={[Function bound openModal]}>
+    Sign up
+  </a>
+  <noscript />
+</div>
+`;
+
+exports[`test Sign-up-modal opened correctly and closed correctly 2`] = `
+<div>
+  <a
+    className="navbar-items"
+    href="#"
+    id="sign-up-open-modal"
+    onClick={[Function bound openModal]}>
+    Sign up
+  </a>
+  <noscript />
+</div>
+`;
+
+exports[`test Sign-up-modal opened correctly and submit working correctly 1`] = `
+<div>
+  <a
+    className="navbar-items"
+    href="#"
+    id="sign-up-open-modal"
+    onClick={[Function bound openModal]}>
+    Sign up
+  </a>
+  <noscript />
+</div>
+`;
+
+exports[`test Sign-up-modal opened correctly and submit working correctly 2`] = `
+<div>
+  <a
+    className="navbar-items"
+    href="#"
+    id="sign-up-open-modal"
+    onClick={[Function bound openModal]}>
+    Sign up
+  </a>
+  <noscript />
+</div>
+`;
