@@ -1,0 +1,31 @@
+{
+  "name": "masp_backend",
+  "version": "1.0.0",
+  "description": "masp backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rezareza/masp_backend.git"
+  },
+    "dependencies": {
+    "express": "4.13.3",
+    "google-cloud": "^0.42.2",
+    "express-fileupload": "0.0.5",
+    "firebase": "^3.5.1",
+    "multer": "^1.2.0",
+    "body-parser": "^1.15.2"
+  },
+  "author": "rahmad1@",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rezareza/masp_backend/issues"
+  },
+  "engines": {
+    "node": "4.1.1"
+  },
+  "homepage": "https://github.com/rezareza/masp_backend#readme"
+}
