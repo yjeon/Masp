@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Modal from 'react-modal';
 import firebase from 'firebase';
+import axios from 'axios';
+
+
 //var firebase = require('firebase');
 
 class SignInModalTrigger extends Component {
@@ -24,15 +27,31 @@ class SignInModalTrigger extends Component {
 
   //this function sends data to firebase server
   submit() {
+    
     const email  = document.getElementById('modal-sign-in-mail-input').value;
     const pass   = document.getElementById('modal-sign-in-password-input').value;
     const promise = firebase.auth().signInWithEmailAndPassword(email, pass);
     promise.catch(e => console.log(e.message));
 
+    //axios.get('http://localhost:5000/signin');
+
+    
     firebase.auth().onAuthStateChanged(firebaseUser => {
       if(firebaseUser) {
         this.setState({open: false});
+        axios.post('https://vast-scrubland-16990.herokuapp.com/signin', {
+          user: firebaseUser
+          })
+          .then(function (response) {
+           console.log(response.data);
+           alert("All previous addresses searched: \n" + response.data);
+          })
+          .catch(function (response) {
+          console.log(response);
+          });
+
         console.log("hi");
+
       }
     });
   }
