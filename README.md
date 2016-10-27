@@ -1,6 +1,9 @@
 ## Heroku URL
   https://vast-scrubland-16990.herokuapp.com/
 
+## Backend repo
+  https://github.com/rezareza/masp_backend/
+
 ## To run it on a local server:
   `git clone https://github.com/yjeon/Masp.git`
 
