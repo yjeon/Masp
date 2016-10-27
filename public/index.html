@@ -1,104 +1,106 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
-    <!-- ReactFire -->
-    <script src="https://cdn.firebase.com/libs/reactfire/1.0.0/reactfire.min.js"></script>
-    <title>Masp</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <div class="navbar">
-      <div class="navbar-wrapper">
-        <div class="navbar-logo-container" id="navbar-logo-container">
-          <a class="navbar-logo-text" href="#">masp</a>
-        </div>
-        <div class="navbar-links-container">
-          <div class="navbar-links">
-            <div id="sign-in-link" class="navbar-links"></div>
-            <div id="sign-up-link" class="navbar-links"></div>
-            <div id="sign-out-link" class="navbar-links hidden">
-              <a class="navbar-items" href="#">Sign out</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="maps-container">
-      <input id="pac-input" class="controls" type="text" placeholder="Search Box"></input>
-      <div id="map"></div>
-    </div>
-    <div class="footer-container" id="footer-container">
-      <div class="footer-items-container">
-        <p class="footer">icon by <a href="http://www.flaticon.com/authors/madebyoliver" class="footer-links">Madebyoliver</a> from <a href="http://www.flaticon.com" class="footer-links">www.flaticon.com</a></p>
-      </div>
-    </div>
-  </body>
-  <script>
-    function initMap() {
-      var map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        disableDefaultUI: true,
-        zoom: 12,
-      });
-
-      var input = document.getElementById('pac-input');
-      var searchBox = new google.maps.places.SearchBox(input);
-      map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-      map.addListener('bounds_changed', function() {
-        searchBox.setBounds(map.getBounds());
-      });
-
-      var markers = [];
-
-      searchBox.addListener('places_changed', function() {
-        var places = searchBox.getPlaces();
-
-        if (places.length == 0) {
-          return;
-        }
-
-        markers.forEach(function(marker) {
-          marker.setMap(null);
-        });
-        markers = [];
-
-        var bounds = new google.maps.LatLngBounds();
-        places.forEach(function(place) {
-          if (!place.geometry) {
-            console.log("Returned place contains no geometry");
-            return;
-          }
-
-          var icon = {
-            url: place.icon,
-            size: new google.maps.Size(71, 71),
-            origin: new google.maps.Point(0, 0),
-            anchor: new google.maps.Point(17, 34),
-            scaledSize: new google.maps.Size(25, 25)
-          };
-
-          markers.push(new google.maps.Marker({
-            map: map,
-            icon: icon,
-            title: place.name,
-            position: place.geometry.location
-          }));
-
-          if (place.geometry.viewport) {
-            bounds.union(place.geometry.viewport);
-          } else {
-            bounds.extend(place.geometry.location);
-          }
-        });
-        map.fitBounds(bounds);
-      });
-    }
-  </script>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6WqHcYx8ppFi1q0dXyrg6wHo3zszNibY&libraries=places&callback=initMap"></script>
+<!doctype html>		
+<html lang="en">		
+  <head>		
+    <meta charset="utf-8">		
+    <meta name="viewport" content="width=device-width, initial-scale=1">		
+    <link rel="shortcut icon" href="./favicon.ico">		
+    <!-- Firebase -->		
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>		
+    <!-- ReactFire -->		
+    <script src="https://cdn.firebase.com/libs/reactfire/1.0.0/reactfire.min.js"></script>		
+    <title>Masp</title>		
+  </head>		
+  <body>		
+    <div id="root"></div>		
+    <div class="navbar">		
+      <div class="navbar-wrapper">		
+        <div class="navbar-logo-container" id="navbar-logo-container">		
+          <a class="navbar-logo-text" href="#">masp</a>		
+        </div>		
+        <div class="navbar-links-container">		
+          <div class="navbar-links">		
+            <div id="sign-in-link" class="navbar-links"></div>		
+            <div id="sign-up-link" class="navbar-links"></div>		
+            <div id="sign-out-link" class="navbar-links hidden">		
+              <a class="navbar-items" href="#">Sign out</a>		
+            </div>		
+          </div>		
+        </div>		
+      </div>		
+    </div>		
+    <div class="maps-container">		
+      <input id="pac-input" class="controls" type="text" placeholder="Search Box"></input>		
+      <div id="map"></div>		
+    </div>		
+    <div class="footer-container" id="footer-container">		
+      <div class="footer-items-container">		
+        <p class="footer">icon by <a href="http://www.flaticon.com/authors/madebyoliver" class="footer-links">Madebyoliver</a> from <a href="http://www.flaticon.com" class="footer-links">www.flaticon.com</a></p>		
+      </div>		
+    </div>		
+  </body>		
+  <script src="./build/static/js/main.fc109897.js"></script>		
+  <link rel="stylesheet" href="./build/static/css/main.dda1d15c.css">		
+  <script>		
+    function initMap() {		
+      var map = new google.maps.Map(document.getElementById('map'), {		
+        center: {lat: -34.397, lng: 150.644},		
+        disableDefaultUI: true,		
+        zoom: 12,		
+      });		
+		
+      var input = document.getElementById('pac-input');		
+      var searchBox = new google.maps.places.SearchBox(input);		
+      map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);		
+		
+      map.addListener('bounds_changed', function() {		
+        searchBox.setBounds(map.getBounds());		
+      });		
+		
+      var markers = [];		
+		
+      searchBox.addListener('places_changed', function() {		
+        var places = searchBox.getPlaces();		
+		
+        if (places.length == 0) {		
+          return;		
+        }		
+		
+        markers.forEach(function(marker) {		
+          marker.setMap(null);		
+        });		
+        markers = [];		
+		
+        var bounds = new google.maps.LatLngBounds();		
+        places.forEach(function(place) {		
+          if (!place.geometry) {		
+            console.log("Returned place contains no geometry");		
+            return;		
+          }		
+		
+          var icon = {		
+            url: place.icon,		
+            size: new google.maps.Size(71, 71),		
+            origin: new google.maps.Point(0, 0),		
+            anchor: new google.maps.Point(17, 34),		
+            scaledSize: new google.maps.Size(25, 25)		
+          };		
+		
+          markers.push(new google.maps.Marker({		
+            map: map,		
+            icon: icon,		
+            title: place.name,		
+            position: place.geometry.location		
+          }));		
+		
+          if (place.geometry.viewport) {		
+            bounds.union(place.geometry.viewport);		
+          } else {		
+            bounds.extend(place.geometry.location);		
+          }		
+        });		
+        map.fitBounds(bounds);		
+      });		
+    }		
+  </script>		
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6WqHcYx8ppFi1q0dXyrg6wHo3zszNibY&libraries=places&callback=initMap"></script>		
 </html>
