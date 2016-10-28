@@ -3,6 +3,7 @@
 
 ## Backend repo
   https://github.com/rezareza/masp_backend/
+>>>>>>> gh-pages
 
 ## To run it on a local server:
   `git clone https://github.com/yjeon/Masp.git`
