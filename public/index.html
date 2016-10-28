@@ -8,6 +8,8 @@
     <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>		
     <!-- ReactFire -->		
     <script src="https://cdn.firebase.com/libs/reactfire/1.0.0/reactfire.min.js"></script>		
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
     <title>Masp</title>		
   </head>		
   <body>		
@@ -36,11 +38,36 @@
       <div class="footer-items-container">		
         <p class="footer">icon by <a href="http://www.flaticon.com/authors/madebyoliver" class="footer-links">Madebyoliver</a> from <a href="http://www.flaticon.com" class="footer-links">www.flaticon.com</a></p>		
       </div>		
-    </div>		
+     <form id="newItemForm" action="/upload" method="post" enctype="multipart/form-data">
+      <input type="text" id="newTodo" name="uid" />
+      <input type="file" id="newFile" name="img" />
+      <input type="submit" value="New" />
+    </form>
+   </div>		
   </body>		
   <script src="./build/static/js/main.fc109897.js"></script>		
   <link rel="stylesheet" href="./build/static/css/main.dda1d15c.css">		
-  <script>		
+     function createTodo(text, img) {
+      if(img) {
+        $('#todoItems').append('<div class="todoItem"><img src="'+img+'" /><br/>'+text+'</div>');
+      } else {
+        $('#todoItems').append('<div class="todoItem">'+text+'</div>');
+      }
+    }
+
+    $('#newItemForm').submit(function(e) {
+      e.preventDefault();
+      var formData = new FormData($("#newItemForm")[0]);
+      console.log(formData);
+      $.ajax({
+        type: "POST",
+        url: "/upload",
+        data: formData,
+        processData: false,
+        contentType: false
+      });
+    });
+ <script>		
     function initMap() {		
       var map = new google.maps.Map(document.getElementById('map'), {		
         center: {lat: -34.397, lng: 150.644},		
