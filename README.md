@@ -1,3 +1,5 @@
+## We've moved to https://github.com/rezareza/masp_backend for submitting HW starting HW8
+
 ## Heroku URL
   https://vast-scrubland-16990.herokuapp.com/
 
